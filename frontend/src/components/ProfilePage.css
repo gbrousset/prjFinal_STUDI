@@ -1,0 +1,41 @@
+.profile-container {
+    max-width: 700px;
+    margin: auto;
+    padding: 40px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+    margin-bottom: 30px;
+}
+
+.card-title {
+    font-size: 24px;
+}
+
+.logout-button {
+    margin-top: 15px;
+}
+
+.update-title {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.actions button {
+    flex: 1;
+    margin: 0 10px;
+}
