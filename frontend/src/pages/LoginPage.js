@@ -17,7 +17,7 @@ const LoginPage = () => {
         setMessage(''); 
 
         try {
-            const response = await axios.post('https://prjfinal-studi-frontend.onrender.com/api/login', {
+            const response = await axios.post('https://prjfinal-studi.onrender.com/api/login', {
                 email,
                 password,
                 phone, 
