@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://prjfinal-studi-frontend.onrender.com/api/auth'; 
+const API_URL = 'https://prjfinal-studi.onrender.com/api/auth'; 
 
 // Fonction d'inscription
 export const registerUser = async (userData) => {
@@ -16,7 +16,7 @@ export const loginUser = async (credentials) => {
 
 const fetchUserData = async () => {
     try {
-      const response = await axios.get('https://prjfinal-studi-frontend.onrender.com/api/profile', { withCredentials: true });
+      const response = await axios.get('https://prjfinal-studi.onrender.com/api/profile', { withCredentials: true });
       console.log(response.data);
     } catch (error) {
       console.error('Erreur lors de la récupération des données utilisateur:', error);
