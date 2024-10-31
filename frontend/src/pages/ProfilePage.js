@@ -37,7 +37,7 @@ const ProfilePage = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post('https://prjfinal-studi.com/api/logout', {}, { withCredentials: true });
+      await axios.post('https://prjfinal-studi.onrender.com/api/logout', {}, { withCredentials: true });
       localStorage.removeItem('token');
       localStorage.removeItem('userId');
       localStorage.removeItem('role');
