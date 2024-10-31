@@ -18,7 +18,7 @@ const AdminDashboard = () => {
     useEffect(() => {
         const fetchOffers = async () => {
             try {
-                const response = await axios.get('http://localhost:3001/api/offers');
+                const response = await axios.get('https://prjfinal-studi-frontend.onrender.com/api/offers');
                 setOffers(response.data);
             } catch (err) {
                 console.error('Erreur lors de la récupération des offres:', err);
@@ -47,9 +47,9 @@ const AdminDashboard = () => {
             };
 
             if (selectedOffer) {
-                await axios.put(`http://localhost:3001/api/offers/${selectedOffer.offer_id}`, offerData, { headers });
+                await axios.put(`https://prjfinal-studi-frontend.onrender.com/api/offers/${selectedOffer.offer_id}`, offerData, { headers });
             } else {
-                await axios.post('http://localhost:3001/api/offers', offerData, { headers });
+                await axios.post('https://prjfinal-studi-frontend.onrender.com/api/offers', offerData, { headers });
             }
 
             // Réinitialiser les champs du formulaire
@@ -60,7 +60,7 @@ const AdminDashboard = () => {
             setSelectedOffer(null);
 
             // Récupérer à nouveau les offres
-            const response = await axios.get('http://localhost:3001/api/offers');
+            const response = await axios.get('https://prjfinal-studi-frontend.onrender.com/api/offers');
             setOffers(response.data);
         } catch (err) {
             console.error('Erreur lors de la création ou de la mise à jour de l\'offre:', err);
@@ -74,7 +74,7 @@ const AdminDashboard = () => {
                 Authorization: `Bearer ${token}`,
             };
 
-            await axios.delete(`http://localhost:3001/api/offers/${offerId}`, { headers });
+            await axios.delete(`https://prjfinal-studi-frontend.onrender.com/api/offers/${offerId}`, { headers });
             // Mettre à jour la liste des offres
             setOffers(offers.filter(offer => offer.offer_id !== offerId));
         } catch (err) {
