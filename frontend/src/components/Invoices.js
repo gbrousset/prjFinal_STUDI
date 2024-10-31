@@ -10,7 +10,7 @@ const Invoices = () => {
     useEffect(() => {
         const fetchPayments = async () => {
             try {
-                const response = await axios.get(`http://localhost:3001/api/payments/user/${userId}`);
+                const response = await axios.get(`https://prjfinal-studi-frontend.onrender.com/api/payments/user/${userId}`);
                 setPayments(response.data);
                 setLoading(false);
             } catch (error) {
