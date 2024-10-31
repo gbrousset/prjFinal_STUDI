@@ -19,3 +19,5 @@ Application de Réservation de Billets Olympiques
 5. Lancez l'application (les deux lignes ci-dessous doivent être exécuté à la suite)
    a. Dans le dossier backend exécutez la commande "node server.js"
    b. Dans le dossier frontend exécutez la commande "npm start"
+
+L'application est déployée sur render, voici le lien: https://prjfinal-studi-frontend.onrender.com
