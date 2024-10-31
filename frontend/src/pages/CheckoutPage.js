@@ -33,7 +33,7 @@ const CheckoutPage = () => {
             try {
                 // Mettre à jour la quantité d'offres vendues
                 const offerPromises = selectedOffers.map(offer => 
-                    axios.put(`https://prjfinal-studi-frontend.onrender.com/api/offers/${offer.offer_id}/purchase`, {
+                    axios.put(`https://prjfinal-studi.onrender.com/api/offers/${offer.offer_id}/purchase`, {
                         quantity: 1,
                     }, {
                         headers: {
@@ -46,7 +46,7 @@ const CheckoutPage = () => {
 
                 // Créer les billets
                 const ticketPromises = selectedOffers.map(offer =>
-                    axios.post('https://prjfinal-studi-frontend.onrender.com/api/tickets', {
+                    axios.post('https://prjfinal-studi.onrender.com/api/tickets', {
                         offer_id: offer.offer_id,
                         purchase_amount: offer.price,
                     }, {
@@ -67,7 +67,7 @@ const CheckoutPage = () => {
                         status: 'réussi',
                     });
 
-                    return axios.post('https://prjfinal-studi-frontend.onrender.com/api/payments/create', {
+                    return axios.post('https://prjfinal-studi.onrender.com/api/payments/create', {
                         user_id: userId,
                         ticket_id: ticket.data.ticket_id,
                         amount: ticket.data.purchase_amount,
