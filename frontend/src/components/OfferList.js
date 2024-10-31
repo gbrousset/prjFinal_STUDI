@@ -13,7 +13,7 @@ const OfferList = () => {
     useEffect(() => {
         const fetchOffers = async () => {
             try {
-                const response = await axios.get('https://prjfinal-studi-frontend.onrender.com/api/offers');
+                const response = await axios.get('https://prjfinal-studi.onrender.com/api/offers');
                 setOffers(response.data);
             } catch (error) {
                 console.error('Erreur lors de la récupération des offres:', error);
