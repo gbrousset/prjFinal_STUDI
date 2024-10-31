@@ -15,7 +15,7 @@ const ResetPasswordPage = () => {
     setMessage('');
 
     try {
-      const response = await axios.post('https://prjfinal-studi-frontend.onrender.com/api/reset-password', {
+      const response = await axios.post('https://prjfinal-studi.onrender.com/api/reset-password', {
         email,
         newPassword,
         phone,
