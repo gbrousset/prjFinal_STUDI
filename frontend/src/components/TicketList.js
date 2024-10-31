@@ -11,7 +11,7 @@ const TicketList = () => {
     useEffect(() => {
         const fetchTickets = async () => {
             try {
-                const response = await axios.get('http://localhost:3001/api/tickets', { withCredentials: true });
+                const response = await axios.get('https://prjfinal-studi-frontend.onrender.com/api/tickets', { withCredentials: true });
                 setTickets(response.data);
             } catch (err) {
                 console.error('Erreur lors de la récupération des billets:', err);
