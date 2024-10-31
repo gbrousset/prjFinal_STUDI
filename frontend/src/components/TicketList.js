@@ -14,7 +14,7 @@ const TicketList = () => {
                 const token = localStorage.getItem('auth_key');
                 const response = await axios.get('https://prjfinal-studi.onrender.com/api/tickets', {
                     headers: {
-                        Authorization: `Bearer ${token}` // Ajouter le token dans l'en-tête Authorization
+                        Authorization: `Bearer ${token}`, 
                     }, 
                     withCredentials: true });
                 setTickets(response.data);
