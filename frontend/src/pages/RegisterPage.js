@@ -24,7 +24,7 @@ const RegisterPage = () => {
     }
 
     try {
-      const response = await axios.post('https://prjfinal-studi-frontend.onrender.com/api/register', {
+      const response = await axios.post('https://prjfinal-studi.onrender.com/api/register', {
         username,
         email,
         password,
