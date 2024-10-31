@@ -11,7 +11,7 @@ const TicketList = () => {
     useEffect(() => {
         const fetchTickets = async () => {
             try {
-                const token = localStorage.getItem('auth_key');
+                const token = localStorage.getItem('token');
                 const response = await axios.get('https://prjfinal-studi.onrender.com/api/tickets', {
                     headers: {
                         Authorization: `Bearer ${token}`, 
