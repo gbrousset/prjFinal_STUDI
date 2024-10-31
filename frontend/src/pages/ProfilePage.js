@@ -16,7 +16,7 @@ const ProfilePage = () => {
       const token = localStorage.getItem('token');
 
       try {
-        const response = await axios.get('http://localhost:3001/api/profile', {
+        const response = await axios.get('https://prjfinal-studi-frontend.onrender.com/api/profile', {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
@@ -37,7 +37,7 @@ const ProfilePage = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post('http://localhost:3001/api/logout', {}, { withCredentials: true });
+      await axios.post('https://prjfinal-studi-frontend.onrender.com/api/logout', {}, { withCredentials: true });
       localStorage.removeItem('token');
       localStorage.removeItem('userId');
       localStorage.removeItem('role');
@@ -53,7 +53,7 @@ const ProfilePage = () => {
     const token = localStorage.getItem('token');
 
     try {
-      const response = await axios.put('http://localhost:3001/api/profile', {
+      const response = await axios.put('https://prjfinal-studi-frontend.onrender.com/api/profile', {
         email: newEmail, 
         password: newPassword 
       }, {
