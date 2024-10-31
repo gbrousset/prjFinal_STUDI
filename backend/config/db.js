@@ -7,6 +7,9 @@ const pool = new Pool({
     database: 'billeterie_jo_db', // Nom de la base de données
     password: 'e4Nqx4gTGEbPsAojRT5HDMkjTn7eimkR', // Mot de passe de la base de données
     port: 5432, // Le port par défaut de PostgreSQL
+    ssl: {
+        rejectUnauthorized: false, // Cela permet de contourner les vérifications de certificat (non recommandé en production)
+    },
 });
 
 // Exporter le pool pour l'utiliser dans d'autres fichiers
