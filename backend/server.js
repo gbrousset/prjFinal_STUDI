@@ -13,7 +13,7 @@ const cookieParser = require('cookie-parser');
 const port = 3001;
 
 const corsOptions = {
-    origin: 'http://localhost:3000', 
+    origin: 'https://prjfinal-studi-frontend.onrender.com/', 
     credentials: true, 
 };
 
