@@ -12,7 +12,11 @@ const TicketList = () => {
         const fetchTickets = async () => {
             try {
                 const token = localStorage.getItem('auth_key');
-                const response = await axios.get('https://prjfinal-studi.onrender.com/api/tickets', { withCredentials: true });
+                const response = await axios.get('https://prjfinal-studi.onrender.com/api/tickets', {
+                    headers: {
+                        Authorization: `Bearer ${token}` // Ajouter le token dans l'en-tête Authorization
+                    }, 
+                    withCredentials: true });
                 setTickets(response.data);
             } catch (err) {
                 console.error('Erreur lors de la récupération des billets:', err);
