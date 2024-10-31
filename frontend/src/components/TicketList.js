@@ -11,6 +11,7 @@ const TicketList = () => {
     useEffect(() => {
         const fetchTickets = async () => {
             try {
+                const token = localStorage.getItem('auth_key');
                 const response = await axios.get('https://prjfinal-studi.onrender.com/api/tickets', { withCredentials: true });
                 setTickets(response.data);
             } catch (err) {
